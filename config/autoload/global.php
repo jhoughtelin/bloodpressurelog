@@ -14,9 +14,7 @@
 return [
     'db' => [
         'driver' => 'Pdo',
-        'username' => 'root',
-        'password' => 'gs123',
-        'dsn' => 'mysql:dbname=zf2;host=127.0.0.1',
+        'dsn' => 'mysql:dbname=zf2;host=localhost',
         'driver_options' => [
             PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''
         ],
