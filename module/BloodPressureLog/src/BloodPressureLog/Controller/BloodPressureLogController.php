@@ -3,6 +3,7 @@
 namespace BloodPressureLog\Controller;
 
 use BloodPressureLog\Form\BloodPressureLogForm;
+use BloodPressureLog\Model\BloodPressureLog;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 
