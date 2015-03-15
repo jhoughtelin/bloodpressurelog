@@ -59,6 +59,16 @@ class BloodPressureLog implements InputFilterAwareInterface
         return $this;
     }
 
+    public function getArrayCopy()
+    {
+        return get_object_vars($this);
+    }
+
+    public function exchangeArray(array $options)
+    {
+        $this->setOptions($options);
+    }
+
     /**
      * @return mixed
      */

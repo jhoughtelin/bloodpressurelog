@@ -27,6 +27,9 @@ class BloodPressureLogForm extends Form
             'options' => [
                 'label' => 'Timestamp',
             ],
+            'attributes' => [
+                'placeholder' => date("Y-m-d H:i:s")
+            ]
         ]);
 
         $this->add([
@@ -49,7 +52,7 @@ class BloodPressureLogForm extends Form
             'name' => 'bpm',
             'type' => 'text',
             'options' => [
-                'label' => 'Beats Per Minute',
+                'label' => 'BPM',
             ],
         ]);
 

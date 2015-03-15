@@ -39,6 +39,25 @@ class BloodPressureLogTable extends AbstractTableGateway
         return $entities;
     }
 
+    public function getBloodPressureLog($id)
+    {
+        $id = (int) $id;
+        $rowset = $this->select(['id' => $id]);
+        $row = $rowset->current();
+        if(!$row) {
+            throw new \Exception("Could not find row $id");
+        }
+
+        $entity = new BloodPressureLog();
+        $entity->setId($row->id)
+            ->setTimestamp($row->timestamp)
+            ->setSystolic($row->systolic)
+            ->setDiastolic($row->diastolic)
+            ->setBpm($row->bpm);
+
+        return $entity;
+    }
+
     public function saveBloodPressureLog(BloodPressureLog $bloodPressureLog)
     {
         $data = [
@@ -60,5 +79,9 @@ class BloodPressureLogTable extends AbstractTableGateway
             // Update
             $this->update($data, ['id' => $id]);
         }
+    }
+
+    public function deleteBloodPressureLog($id) {
+        $this->delete(['id' => (int) $id]);
     }
 }

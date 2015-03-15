@@ -1,3 +1,6 @@
-Module: BloodPressureLog
-Controller: BloodPressureLog
-Action: Edit
+<h1>Edit Blood Pressure Log Entry</h1>
+<?php
+$form = $this->form;
+echo $this->form()->openTag($form);
+echo $this->formCollection($form);
+echo $this->form()->closeTag();

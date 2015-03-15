@@ -18,7 +18,7 @@ return [
                     'route' => '/bloodpressurelog[/:action][/:id]',
                     'constraints' => [
                         'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
-                        'id' => 'index',
+                        'id' => '[0-9]+',
                     ],
                     'defaults' => [
                         'controller' => 'BloodPressureLog\Controller\BloodPressureLog',

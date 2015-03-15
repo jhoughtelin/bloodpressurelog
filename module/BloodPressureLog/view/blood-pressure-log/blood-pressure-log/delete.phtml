@@ -1,3 +1,35 @@
-Module: BloodPressureLog
-Controller: BloodPressureLog
-Action: Delete
+<h1>Delete a Blood Pressure Log</h1>
+<p>Are you sure you want to delete the following Blood Pressure Log entry?</p>
+<div class="row">
+    <div class="col-md-3">
+        <table class="table">
+            <tr>
+                <th>Systolic</th>
+                <td><?= $bloodPressureLog->systolic ?></td>
+            </tr>
+            <tr>
+                <th>Diastolic</th>
+                <td><?= $bloodPressureLog->diastolic ?></td>
+            </tr>
+            <tr>
+                <th>BPM</th>
+                <td><?= $bloodPressureLog->bpm ?></td>
+            </tr>
+            <tr>
+                <th>Timestamp</th>
+                <td><?= $bloodPressureLog->timestamp ?></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<form action="" method="POST">
+    <input type="hidden" name="id" value="<?= (int) $bloodPressureLog->id ?>"/>
+    <input type="submit" name="del" value="Yes"/>
+    <input type="submit" name="del" value="No"/>
+</form>
+
+<style type="text/css">
+    th {
+        text-align: right;
+    }
+</style>
