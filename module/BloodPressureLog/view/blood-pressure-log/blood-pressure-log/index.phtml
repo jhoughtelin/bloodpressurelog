@@ -1,0 +1,32 @@
+<h1>Blood Pressure Log</h1>
+
+<a href="<?php echo $this->url('bloodpressurelog',['action' => 'add']) ?>"
+    class="btn btn-default">
+    <?php echo $this->translate('Add Reading') ?>
+</a>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Timestamp</th>
+        <th>Systolic</th>
+        <th>Diastolic</th>
+        <th>BPM</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php foreach ($bloodPressureLog as $aLog) : ?>
+        <tr>
+            <td><?= $aLog->getTimestamp() ?></td>
+            <td><?= $aLog->getSystolic() ?></td>
+            <td><?= $aLog->getDiastolic() ?></td>
+            <td><?= $aLog->getBpm() ?></td>
+            <td>
+                <a href="<?=$this->url('bloodpressurelog',['action'=>'edit','id'=>$aLog->id])?>" class="btn btn-default">Edit</a>
+                <a href="<?=$this->url('bloodpressurelog',['action'=>'delete','id'=>$aLog->id])?>" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+    <?php endforeach ?>
+    </tbody>
+</table>
