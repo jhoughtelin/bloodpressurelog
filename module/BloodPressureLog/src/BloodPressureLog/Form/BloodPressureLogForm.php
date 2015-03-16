@@ -25,7 +25,7 @@ class BloodPressureLogForm extends Form
             'name' => 'timestamp',
             'type' => 'text',
             'options' => [
-                'label' => 'Timestamp',
+                'label' => 'Timestamp (Optional)',
             ],
             'attributes' => [
                 'placeholder' => date("Y-m-d H:i:s")
