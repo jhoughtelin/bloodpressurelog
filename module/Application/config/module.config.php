@@ -16,7 +16,7 @@ return array(
                     'route'    => '/',
                     'defaults' => array(
                         'controller' => 'BloodPressureLog\Controller\BloodPressureLog',
-                        'action'     => 'index',
+                        'action'     => 'Index',
                     ),
                 ),
             ),
